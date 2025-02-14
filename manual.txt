@@ -1,0 +1,25 @@
+1.- ejecutar en la terminar docker-compose up para utilizar el archivo docker.compose.yml
+    para la instalacion y configuracion de Zookeeper y Kafka en Docker.
+
+2.- Verfiicamos con el comando docker ps para ver los contenedores que estan corriendo
+
+3.- Creamos un topico con el siguiente comando:
+    docker exec -it kafka-1 kafka-topics --create --topic alertas_infantiles --bootstrap-server localhost:9092 --partitions 3 --replication-factor 2
+
+4.- verificamos su creacion con el comando:
+    docker exec -it kafka-1 kafka-topics --bootstrap-server localhost:9092 --list
+
+5.- Ejecuta el microservicio en Spring Boot con:
+    mvn spring-boot:run
+
+6.- Ejecutar la sigueinte prueba desde Postman:
+
+    POST: http://localhost:8081/api/alertas/enviar
+    raw: {
+    "nombrePaciente": "Lucas Pérez",
+    "tipoAlerta": "Respiratoria",
+    "nivelAlerta": "Alta"
+}
+
+7.- Verificar que Kafka recibió los mensajes
+    
