@@ -58,6 +58,7 @@ services:
       KAFKA_LISTENERS: "INSIDE://0.0.0.0:9092,OUTSIDE://0.0.0.0:9093"
       KAFKA_LISTENER_SECURITY_PROTOCOL: "PLAINTEXT"
       KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka-1:9092,OUTSIDE://kafka-1:9093"
+      #KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka-1:9092,OUTSIDE://localhost:9093" #Test personal
       KAFKA_LISTENER_INTERNAL: "INSIDE"
       KAFKA_LISTENER_EXTERNAL: "OUTSIDE"
       KAFKA_INTER_BROKER_LISTENER_NAME: "INSIDE"  # Añadir esta línea para definir el listener inter-broker
@@ -76,6 +77,7 @@ services:
       KAFKA_LISTENERS: "INSIDE://0.0.0.0:9092,OUTSIDE://0.0.0.0:9093"
       KAFKA_LISTENER_SECURITY_PROTOCOL: "PLAINTEXT"
       KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka-2:9092,OUTSIDE://kafka-2:9093"
+      #KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka-2:9092,OUTSIDE://localhost:9094" # Test Personal
       KAFKA_LISTENER_INTERNAL: "INSIDE"
       KAFKA_LISTENER_EXTERNAL: "OUTSIDE"
       KAFKA_INTER_BROKER_LISTENER_NAME: "INSIDE"  # Añadir esta línea para definir el listener inter-broker
@@ -94,6 +96,7 @@ services:
       KAFKA_LISTENERS: "INSIDE://0.0.0.0:9092,OUTSIDE://0.0.0.0:9093"
       KAFKA_LISTENER_SECURITY_PROTOCOL: "PLAINTEXT"
       KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka-3:9092,OUTSIDE://kafka-3:9093"
+      #KAFKA_ADVERTISED_LISTENERS: "INSIDE://kafka-3:9092,OUTSIDE://localhost:9095" # Test personal
       KAFKA_LISTENER_INTERNAL: "INSIDE"
       KAFKA_LISTENER_EXTERNAL: "OUTSIDE"
       KAFKA_INTER_BROKER_LISTENER_NAME: "INSIDE"  # Añadir esta línea para definir el listener inter-broker
@@ -105,7 +108,7 @@ services:
     image: provectuslabs/kafka-ui:latest
     container_name: kafka-ui
     ports:
-      - "8080:8080"
+      - "9090:8080"
     environment:
       KAFKA_CLUSTERS_0_NAME: "docker-cluster"
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka-1:9092,kafka-2:9093,kafka-3:9094"

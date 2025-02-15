@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  generador-alertas:
+    image: generador-alertas
+    container_name: generador-alertas
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9081:8081"
+    depends_on:
+      - kafka-1
+      - kafka-2
+      - kafka-3
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka-1:9092,kafka-2:9093,kafka-3:9094
+    networks:
+      - kafka-net
+
+networks:
+  kafka-net:
+    driver: bridge
