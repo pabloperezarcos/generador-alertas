@@ -22,4 +22,10 @@
 }
 
 7.- Verificar que Kafka recibió los mensajes
+
+
+
+ADICIONAL - CREAR RED
+docker network create --driver bridge kafka-net
+
     
