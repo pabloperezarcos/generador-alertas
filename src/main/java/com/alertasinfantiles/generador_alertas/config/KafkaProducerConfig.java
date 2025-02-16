@@ -40,4 +40,12 @@ public class KafkaProducerConfig {
                 .replicas(1) // Define la cantidad de réplicas (ajusta según necesidad)
                 .build();
     }
+
+    @Bean
+    public NewTopic createTopic2() {
+        return TopicBuilder.name("alertas_graves_infantiles")
+                .partitions(3) // Define la cantidad de particiones
+                .replicas(1) // Define la cantidad de réplicas (ajusta según necesidad)
+                .build();
+    }
 }
