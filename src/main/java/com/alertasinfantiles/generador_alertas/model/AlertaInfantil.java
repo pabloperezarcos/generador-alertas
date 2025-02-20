@@ -1,17 +1,30 @@
 package com.alertasinfantiles.generador_alertas.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.*;
+import lombok.Data; //Con Lombok no es necesario escribir los Get y Set
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
-@Data // Genera get y set automaticamente gracias a Lombok
-@AllArgsConstructor // Crea constructor automatico
-@NoArgsConstructor // Crea constructor automatico
+@Entity
+@Table(name = "alertas_infantiles")
+@Data
 public class AlertaInfantil {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idAlerta;
+
+    @Column(nullable = false)
     private String nombrePaciente;
+
+    @Column(nullable = false)
     private String tipoAlerta;
+
+    @Column(nullable = false)
     private String nivelAlerta;
-    private LocalDateTime fechaAlerta;
+
+    @Column(nullable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone = "UTC")
+    private Instant fechaAlerta = Instant.now();
+
 }

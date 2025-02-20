@@ -1,6 +1,11 @@
 com\alertasinfantiles\generador_alertas\model\AlertaInfantil.class
-com\alertasinfantiles\generador_alertas\config\KafkaProducerConfig.class
-com\alertasinfantiles\generador_alertas\config\SecurityConfig.class
-com\alertasinfantiles\generador_alertas\controller\AlertaController.class
+com\alertasinfantiles\generador_alertas\service\AlertaGraveService.class
 com\alertasinfantiles\generador_alertas\GeneradorAlertasApplication.class
 com\alertasinfantiles\generador_alertas\kafka\AlertaProducer.class
+com\alertasinfantiles\generador_alertas\repository\AlertaGraveRepository.class
+com\alertasinfantiles\generador_alertas\service\AlertaService.class
+com\alertasinfantiles\generador_alertas\config\KafkaProducerConfig.class
+com\alertasinfantiles\generador_alertas\config\SecurityConfig.class
+com\alertasinfantiles\generador_alertas\repository\AlertaRepository.class
+com\alertasinfantiles\generador_alertas\controller\AlertaController.class
+com\alertasinfantiles\generador_alertas\model\AlertaGraveInfantil.class
