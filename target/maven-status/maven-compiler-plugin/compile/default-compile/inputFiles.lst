@@ -3,4 +3,9 @@ C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfa
 C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\controller\AlertaController.java
 C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\GeneradorAlertasApplication.java
 C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\kafka\AlertaProducer.java
+C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\model\AlertaGraveInfantil.java
 C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\model\AlertaInfantil.java
+C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\repository\AlertaGraveRepository.java
+C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\repository\AlertaRepository.java
+C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\service\AlertaGraveService.java
+C:\Users\Pablo\Documents\DUOC UC\generador-alertas\src\main\java\com\alertasinfantiles\generador_alertas\service\AlertaService.java

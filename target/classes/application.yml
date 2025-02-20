@@ -11,3 +11,18 @@ spring:
         
   topic:
     name: alertas_infantiles
+
+    
+  datasource:
+    url: jdbc:oracle:thin:@backduoccloud_high?TNS_ADMIN=/app/wallet
+    username: ADMIN
+    password: Secure1Password2Example
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+    show-sql: true
